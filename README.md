@@ -52,4 +52,4 @@ This repository is licensed under the [MIT License](LICENSE).
 ---
 
 For more information:  
-https://apiiro.com/blog/malicious-code-actionable-steps
+https://apiiro.com/blog/pr-event-malicious-code
