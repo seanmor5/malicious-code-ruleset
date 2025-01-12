@@ -5,7 +5,7 @@ rules:
           - pattern-regex: (curl|wget)\s.*\|\s*(sh|bash|\/bin)
           - pattern-regex: (curl|wget)\s+\-[a-zA-Z]\s+.*(;|\|)\s*(sh|bash|\/bin)\s
           - pattern-regex: .*(bash|sh|/bin/\S*)\s+<\((curl|wget)
-    message: Detect code hidden remotely.
+    message: Code hidden remotely.
     severity: WARNING
     languages:
       - bash

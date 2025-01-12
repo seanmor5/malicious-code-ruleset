@@ -6,7 +6,7 @@ rules:
           ->($Z) { ... }
         }
       }
-    message: Detect common obfuscation by anonymous nesting.
+    message: Common obfuscation by anonymous nesting.
     severity: WARNING
     languages: 
       - ruby

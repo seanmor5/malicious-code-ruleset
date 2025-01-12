@@ -4,7 +4,7 @@ rules:
       - pattern-regex: (ascii|bytes|chr\(|decode|encode|fromhex|f-strings)(.*\1){2,}
       - pattern-regex: (hex\(|index\(|join\(|lambda|oct\(|ord\(|random)(.*\1){2,}
       - pattern-regex: (re\.escape|re\.split|re\.sub|replace|repr\(|unhexlify|str\()(.*\1){2,}
-    message: Detect obfuscation by concatenation of string manipulating methods.
+    message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages:
       - python

@@ -3,7 +3,7 @@ rules:
     pattern-either:
       - pattern-regex: (Convert\.|\.Concat|Encoding\.|\.Format|GetBytes|IndexOf|\.Join)(.*\1){2,}
       - pattern-regex: (new Random|\.Replace|\.Split|StringBuilder|Substring)(.*\1){2,}
-    message: Detect obfuscation by reconstruction of hardcoded data.
+    message: Obfuscation by reconstruction of hardcoded data.
     severity: WARNING
     languages:
       - csharp

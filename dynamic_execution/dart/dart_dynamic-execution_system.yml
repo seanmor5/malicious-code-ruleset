@@ -11,7 +11,7 @@ rules:
           - metavariable-pattern:
               metavariable: $RUN
               pattern-regex: (run|runSync|start)
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - dart

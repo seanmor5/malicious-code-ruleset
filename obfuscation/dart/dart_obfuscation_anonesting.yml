@@ -2,7 +2,7 @@ rules:
   - id: dart-obfuscation-anonymous-nesting
     pattern: |
       ((...) { ((...) { ((...) { ... })() })() })()
-    message: Detect common obfuscation by anonymous nesting.
+    message: Common obfuscation by anonymous nesting.
     severity: WARNING
     languages: 
       - dart

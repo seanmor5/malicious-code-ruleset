@@ -30,7 +30,7 @@ rules:
           - pattern: Object['prototype'][...]['call']
           - pattern-regex: Object(\.|\[).*prototype.*call
     severity: ERROR
-    message: Detect obfuscation by indirect calls.
+    message: Obfuscation by indirect calls.
     languages:
       - javascript
       - typescript

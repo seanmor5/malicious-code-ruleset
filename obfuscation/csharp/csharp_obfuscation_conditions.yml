@@ -2,7 +2,7 @@
 rules:
   - id: csharp-obfuscation-conditions
     pattern-regex: (if|while|for|foreach|switch)\s?\((true|false|1|0|null)\)\s
-    message: Detect obfuscation by spurious conditions.
+    message: Obfuscation by spurious conditions.
     severity: WARNING
     languages: 
       - csharp

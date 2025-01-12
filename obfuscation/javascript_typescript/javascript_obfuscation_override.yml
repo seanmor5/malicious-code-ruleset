@@ -6,7 +6,7 @@ rules:
           - metavariable-pattern:
               metavariable: $IMPOSTOR
               pattern-regex: (Array|Boolean|Date|Error|Function|Number|Object|Promise|RegExp|String|Symbol|URL|define|jQuery|require)
-    message: Detect obfuscation by overriding builtin constructs.
+    message: Obfuscation by overriding builtin constructs.
     severity: ERROR
     languages: 
       - javascript

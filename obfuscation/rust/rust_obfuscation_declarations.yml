@@ -12,7 +12,7 @@ rules:
       - metavariable-pattern:
           metavariable: $VAR
           pattern-regex: ^\d|^.$|(.)\1{2,}|.{64,}|^_0x|([^a-zA-Z0-9_])
-    message: Detect obfuscated declarations names.
+    message: Obfuscated declarations names.
     severity: ERROR
     languages:
       - rust

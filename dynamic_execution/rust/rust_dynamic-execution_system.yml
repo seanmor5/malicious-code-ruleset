@@ -6,7 +6,7 @@ rules:
           let $X = $STD::new("cargo");
           ...
           $X.arg("run");
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - rust

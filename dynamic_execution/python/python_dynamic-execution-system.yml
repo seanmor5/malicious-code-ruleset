@@ -22,7 +22,7 @@ rules:
           - metavariable-regex:
               metavariable: $STR
               regex: .*python -c.*
-    message: Detect language code dynamic execution using system commands.
+    message: Language code dynamic execution using system commands.
     severity: ERROR
     languages:
       - python

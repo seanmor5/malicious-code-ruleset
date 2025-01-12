@@ -3,7 +3,7 @@ rules:
     pattern-either:
       - pattern: $SCRIPT.EvaluateAsync<$TYPE>
       - pattern: $ASSEMBLY.Load("...")
-    message: Detect dynamic execution.
+    message: Dynamic execution.
     severity: ERROR
     languages:
       - csharp

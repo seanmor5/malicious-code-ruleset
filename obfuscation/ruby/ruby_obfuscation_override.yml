@@ -25,7 +25,7 @@ rules:
           - metavariable-pattern:
               metavariable: $IMPOSTOR
               pattern-regex: ^(abs|each|each_with_index|map|select|reject|reduce|inject|collect|to_s|to_i|to_f|length|size|push|pop|shift|unshift|include?|empty?|sort|join|reverse|flatten|uniq|split|gsub|sub|chomp|strip|puts|print|gets|chdir|require|load|define_method|respond_to?|method|call|send|eval|at_exit|raise|warn|sleep|exit)(\..*)?$
-    message: Detect obfuscation by overriding builtin constructs.
+    message: Obfuscation by overriding builtin constructs.
     severity: ERROR
     languages: 
       - ruby

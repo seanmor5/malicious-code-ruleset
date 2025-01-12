@@ -2,7 +2,7 @@ rules:
   - id: python-obfuscation-anonymous-nesting
     pattern: |
       lambda $X: (lambda $Y: (lambda $Z: ...))
-    message: Detect common obfuscation by anonymous nesting.
+    message: Common obfuscation by anonymous nesting.
     severity: WARNING
     languages: 
       - python

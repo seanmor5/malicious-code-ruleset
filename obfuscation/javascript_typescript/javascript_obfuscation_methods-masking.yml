@@ -4,7 +4,7 @@ rules:
       - pattern-regex: (atob\(|Buffer\.from|charCodeAt|decode|encode|fromCharCode|function)(.*\1){2,}
       - pattern-regex: (indexOf|\.join\(|Math\.random|parseInt|\.replace|\.reverse|substr)(.*\1){2,}
       - pattern-regex: (TextDecoder|toString)(.*\1){2,}
-    message: Detect obfuscation by concatenation of string manipulating methods.
+    message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages: 
       - javascript

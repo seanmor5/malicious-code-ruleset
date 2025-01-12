@@ -17,7 +17,7 @@ rules:
       - metavariable-pattern:
           metavariable: $NODE
           pattern-regex: 'node -e .*'
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - javascript

@@ -2,7 +2,7 @@ rules:
   - id: lua-obfuscation-conditions
     pattern-either:
       - pattern-regex: (if|while|until)\s(true|false|1|0|\[\]|\{\}|nil)\s
-    message: Detect common obfuscation techniques.
+    message: Common obfuscation techniques.
     severity: WARNING
     languages: 
       - lua

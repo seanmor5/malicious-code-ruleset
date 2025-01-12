@@ -4,7 +4,7 @@ rules:
       - pattern-regex: (ord|chr|\.unpack|pack|gsub|tr|sub)(.*\1){2,}
       - pattern-regex: (inspect|join|split|reverse|slice|scan|traverse)(.*\1){2,}
       - pattern-regex: (Base64|random_bytes|rand|to_s)(.*\1){2,}
-    message: Detect obfuscation by concatenation of string manipulating methods.
+    message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages:
       - ruby

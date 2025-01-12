@@ -10,7 +10,7 @@ rules:
       - metavariable-pattern:
           metavariable: $RUN
           pattern-regex: (['"])php -r .*\1
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - php

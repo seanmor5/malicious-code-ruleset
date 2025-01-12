@@ -10,7 +10,7 @@ rules:
       - metavariable-pattern:
           metavariable: $IMPOSTOR
           pattern-regex: (any|bool|dict|Exception|getattr|globals|hasattr|len|list|open|print|set|setattr|str|super)
-    message: Detect obfuscation by overriding builtin constructs.
+    message: Obfuscation by overriding builtin constructs.
     severity: ERROR
     languages: 
       - python

@@ -10,7 +10,7 @@ rules:
           - metavariable-pattern:
               metavariable: $CMD
               pattern-regex: (["'])scala -e .*\1
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - scala

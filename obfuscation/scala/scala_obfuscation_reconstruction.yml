@@ -9,7 +9,7 @@ rules:
       - metavariable-pattern:
           metavariable: $CONCAT
           pattern-regex: (List|seq)\(\s*((((["'])(?:(?!\5).)*\5)|(\d+|(0|\\{1,})[beoux]\d+))\s*,\s*){5,}(((((["'])(?:(?!\12).)))*\12)|(\d+|(0|\\{1,})[beoux]\d+))\s*\)
-    message: Detect obfuscation by reconstruction of hardcoded data.
+    message: Obfuscation by reconstruction of hardcoded data.
     severity: WARNING
     languages:
       - scala

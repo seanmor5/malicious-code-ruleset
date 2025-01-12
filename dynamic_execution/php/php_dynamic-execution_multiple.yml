@@ -5,7 +5,7 @@ rules:
       - pattern: create_function
       - pattern: assert
       - pattern-regex: preg_replace\('/e/',.*'.*eval\(.*'
-    message: Detect dynamic execution.
+    message: Dynamic execution.
     severity: ERROR
     languages:
       - php

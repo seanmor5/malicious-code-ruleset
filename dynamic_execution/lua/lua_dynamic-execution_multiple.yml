@@ -3,7 +3,7 @@ rules:
     pattern-either:
       - pattern: load
       - pattern: loadstring
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - lua

@@ -6,7 +6,7 @@ rules:
       - metavariable-pattern:
           metavariable: $CONCAT
           pattern-regex: \[\s*((((["'])(?:(?!\4).)*\4)|(\d+|(0|\\{1,})[beoux]\d+))\s+){5,}(((((["'])(?:(?!\11).)))*\11)|(\d+|(0|\\{1,})[beoux]\d+))\]
-    message: Detect obfuscation by reconstruction of hardcoded data.
+    message: Obfuscation by reconstruction of hardcoded data.
     severity: WARNING
     languages:
       - clojure

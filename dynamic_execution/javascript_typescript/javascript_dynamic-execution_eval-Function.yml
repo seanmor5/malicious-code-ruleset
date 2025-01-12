@@ -6,5 +6,5 @@ rules:
     languages:
       - javascript
       - typescript
-    message: Detect dynamic execution using eval and Function.
+    message: Dynamic execution using eval and Function.
     severity: ERROR

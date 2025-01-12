@@ -4,7 +4,7 @@ rules:
         - pattern: exec
         - pattern: eval
         - pattern: bash -c '...'
-    message: Detect dynamic execution.
+    message: Dynamic execution.
     severity: ERROR
     languages:
       - bash

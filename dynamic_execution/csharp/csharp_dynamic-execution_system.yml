@@ -14,7 +14,7 @@ rules:
           - metavariable-regex:
               metavariable: $CODE
               regex: .*script -e 
-    message: Detect dynamic execution by system commands.
+    message: Dynamic execution by system commands.
     severity: ERROR
     languages:
       - csharp

@@ -2,7 +2,7 @@ rules:
   - id: go-obfuscation-methods-masking
     pattern-either:
       - pattern-regex: (strconv\.|strings\.)(.*\1){2,}
-    message: Detect obfuscation by concatenation of string manipulating methods.
+    message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages:
       - go

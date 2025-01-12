@@ -6,7 +6,7 @@ rules:
           - metavariable-pattern:
               metavariable: $IMPOSTOR
               pattern-regex: ^(assert|error|getmetatable|io\.|ipairs|load|math\.|next|os\.|pairs|pcall|print|require|select|setmetatable|string|table|tonumber|tostring|type|package)
-    message: Detect obfuscation by overriding builtin constructs.
+    message: Obfuscation by overriding builtin constructs.
     severity: ERROR
     languages: 
       - lua

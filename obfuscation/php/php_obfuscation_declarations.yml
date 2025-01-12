@@ -21,7 +21,7 @@ rules:
         - metavariable-pattern:
             metavariable: $DEF
             pattern-regex: (['"](\d|.|.*(.)\3{2,}.*|.{64,}|_0x.*|([^a-zA-Z0-9$_\->]))['"])
-    message: Detect obfuscated declarations names.
+    message: Obfuscated declarations names.
     severity: ERROR
     languages:
       - php

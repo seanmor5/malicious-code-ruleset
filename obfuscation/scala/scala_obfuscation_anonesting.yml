@@ -4,7 +4,7 @@ rules:
       ($X: $_) => 
         ($Y: $_) => 
           ($Z: $_) => ...
-    message: Detect common obfuscation by anonymous nesting.
+    message: Common obfuscation by anonymous nesting.
     severity: WARNING
     languages: 
       - scala

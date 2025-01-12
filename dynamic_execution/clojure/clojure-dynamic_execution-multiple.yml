@@ -4,7 +4,7 @@ rules:
       - pattern: eval
       - pattern: load-string
       - pattern: RT/var ... ...
-    message: Detect dynamic execution.
+    message: Dynamic execution.
     severity: ERROR
     languages:
       - clojure

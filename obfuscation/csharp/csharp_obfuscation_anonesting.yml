@@ -2,7 +2,7 @@
 rules:
   - id: csharp-obfuscation-anonymous-nesting
     pattern: Func<$T1, Func<$T2, $R>> $F = ...;
-    message: Detect obfuscation by anonymous nesting.
+    message: Obfuscation by anonymous nesting.
     severity: WARNING
     languages: 
       - csharp

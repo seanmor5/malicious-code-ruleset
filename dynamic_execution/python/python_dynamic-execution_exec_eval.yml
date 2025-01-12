@@ -5,7 +5,7 @@ rules:
       - pattern: exec
       - pattern: __import__($PACKAGE).eval
       - pattern: __import__($PACKAGE).exec
-    message: Detect dynamic execution using exec or eval.
+    message: Dynamic execution using exec or eval.
     severity: ERROR
     languages:
       - python
