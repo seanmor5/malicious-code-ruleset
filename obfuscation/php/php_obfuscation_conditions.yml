@@ -1,0 +1,7 @@
+rules:
+  - id: php-obfuscation-conditions
+    pattern-regex: (if|elseif|while|for|switch)\s*\((true|false|null|empty)\)
+    message: Detect obfuscation by spurious conditions.
+    severity: WARNING
+    languages: 
+      - php

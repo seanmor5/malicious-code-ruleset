@@ -1,0 +1,7 @@
+rules:
+  - id: clojure-obfuscation-conditions
+    pattern-regex: (if|when|cond|if-not|when-not|case)\s\(?(true|false|nil|1|\[\]|\(\)|\{\})\)?\s
+    message: Detect obfuscation by spurious conditions.
+    severity: WARNING
+    languages: 
+      - clojure

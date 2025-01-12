@@ -1,0 +1,7 @@
+rules:
+  - id: python-obfuscation-generic
+    pattern-regex: (__import__|globals\(\))
+    message: Detect common obfuscation signatures.
+    severity: WARNING
+    languages: 
+      - python
