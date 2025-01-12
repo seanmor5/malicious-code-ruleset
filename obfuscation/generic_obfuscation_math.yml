@@ -1,7 +1,7 @@
 rules:
   - id: generic-obfuscation-math
     pattern-either:
-      - pattern-regex: (.*[~<>\/%\^&\*\-\+=].*){8,}
+      - pattern-regex: ([~<>\/%\^&\*\-\+=].*[^~<>\/%\^&\*\-\+=]){8,}
     message: Detect obfuscation containing arithmetic noise.
     severity: WARNING
     languages: 
