@@ -39,11 +39,11 @@ Scala
 
 ## Usage
 
-This ruleset was developed for integration with CI/CD pipelines via Semgrep, enabling detection during any stage of the pipeline. To monitor pull requests in real-time using this ruleset, check out [PR-event](https://github.com/apiiro/pr-event.git).
+This ruleset was developed for integration with any CI/CD pipeline, enabling detection at any stage. To monitor pull requests in real-time using this ruleset and trigger policies and workflows, check out Apiiro's [PRevent](https://github.com/apiiro/PRevent.git).
 
 ## Contributing
 
-Contributions to improve the ruleset are welcome via pull requests or issues with new patterns or suggestions.
+Contributions to improve the ruleset are welcome via pull requests or issues with new patterns (after comprehensive testing) or suggestions.
 
 ## License
 
@@ -52,4 +52,4 @@ This repository is licensed under the [MIT License](LICENSE).
 ---
 
 For more information:  
-https://apiiro.com/blog/pr-event-malicious-code
+https://apiiro.com/blog/prevent-malicious-code
