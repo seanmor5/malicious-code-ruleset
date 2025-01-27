@@ -1,6 +1,7 @@
 rules:
-  - id: java-obfuscation-methods-masking
+  - id: javascript-obfuscation-methods-masking
     pattern-either:
+      - pattern-regex: ((?<!\w|\$)parseInt\(.*){3,}
       - pattern-regex: (?<!\w|\$)((Base64|DatatypeConverter|Random|String|StringBuilder|StringBuffer)\.)(.*(?<!\w|\$)\2){3,}
       - pattern-regex: (\.(append|charAt|concat|delete|format|indexOf|insert))(?!\w|\$)(.*\2(?!\w|\$)){3,}
       - pattern-regex: (\.(join|lastIndexOf|replace|replaceAll|setCharAt|split|startsWith))(?!\w|\$)(.*\2(?!\w|\$)){3,}
@@ -8,4 +9,4 @@ rules:
     message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages:
-      - java
+      - javascript

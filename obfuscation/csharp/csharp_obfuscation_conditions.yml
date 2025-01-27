@@ -5,7 +5,8 @@ rules:
       - pattern-either:
           - pattern: if ($VAR) { ... }
           - pattern: while ($VAR) { ... }
-          - pattern: switch ($VAR) { case ... }
+          - pattern: |
+              switch ($VAR) { case $C: ... }
       - metavariable-regex:
           metavariable: $VAR
           regex: ^(?!.*(?<!['"`])\b(?!true|false|null)[a-zA-Z_.]).*$
