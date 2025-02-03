@@ -1,4 +1,3 @@
-
 rules:
   - id: dart-obfuscation-conditions
     patterns:
@@ -9,7 +8,8 @@ rules:
           - pattern: switch ($VAR) { ... }
       - metavariable-regex:
           metavariable: $VAR
-          regex: ^(?!.*(?<!['"`])\b(?!true|false|null)[a-zA-Z_]).*$
+          # Match all non-literals and the listed literals.
+          regex: ^(?!.*(?<!['"`])\b(?!true|false|null)[a-zA-Z_!]).*$
     message: Obfuscation by spurious conditions.
     severity: WARNING
     languages: 

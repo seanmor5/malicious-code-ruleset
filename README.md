@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository contains Semgrep rules to detect dynamic code execution and obfuscation, patterns found in nearly 100% of malicious code incidents reported to this day. Only rules with low false-positive rates and strong correlation with malicious code are included.
+This repository contains Semgrep (Opengrep) rules to detect dynamic code execution and obfuscation, patterns found in nearly 100% of malicious code incidents reported to this day. Only rules with low false-positive rates and strong correlation with malicious code are included.
 
 ## Supported Languages
 
@@ -39,7 +39,7 @@ Scala
 
 ## Usage
 
-This ruleset was developed for integration with any CI/CD pipeline, enabling detection at any stage. To monitor pull requests in real-time using this ruleset and trigger policies and workflows, check out Apiiro's [PRevent](https://github.com/apiiro/PRevent.git).
+This ruleset was developed for integration with any CI/CD pipeline, enabling detection at any stage. To monitor pull requests in real-time using this ruleset, enforce policies and trigger workflows, check out Apiiro's [PRevent](https://github.com/apiiro/PRevent.git).
 
 The rules are designed to run on code without comments. This is typically done by extracting the relevant part of the code for scanning, writing it to a temporary file, and removing it when done. If you're I/O bound before CPU bound, consider adding comment filtering to your rules instead of using temp files.
 

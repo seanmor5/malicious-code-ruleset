@@ -10,7 +10,8 @@ rules:
             }
       - metavariable-regex:
           metavariable: $VAR
-          regex: ^(?!.*(?<!['"`])\b(?!true|false)[a-zA-Z_.]).*$
+          # Match all non-literals and the listed literals.
+          regex: ^(((?![a-zA-Z_!]).+(?<![a-zA-Z_]))|true|false)$
     message:  Detect obfuscation by spurious conditions.
     severity: WARNING
     languages:

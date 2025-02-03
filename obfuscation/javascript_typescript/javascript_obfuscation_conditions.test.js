@@ -3,11 +3,14 @@
 if (true) {}
 if (!![]) {}
 
+
 // FP
 
-let aa = 1;
-let bb = 2;
 if (aa === bb) {}
+
+if (!x) { 1 }
+
+if (key in object) { 2 }
 
 let condition = (a === 1) ? "yes" : "no";
 

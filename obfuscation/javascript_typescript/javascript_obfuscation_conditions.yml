@@ -8,6 +8,7 @@ rules:
           - pattern: switch ($VAR) { case ... }
       - metavariable-regex:
           metavariable: $VAR
+          # Match all non-literals and the listed literals.
           regex: ^(?!.*(?<!['"`])\b(?!true|false|undefined|null|NaN)[a-zA-Z_$]).*$
     message:  Detect obfuscation by spurious conditions.
     severity: WARNING
