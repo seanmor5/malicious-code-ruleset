@@ -12,11 +12,8 @@ while 'a'>0:
 if not 1:
     pass
 
-x = 3
-match [1,2,x]:
-    case [1,2,3]:
-        pass
-
+while (True):
+    print(1)
 
 # FP
 

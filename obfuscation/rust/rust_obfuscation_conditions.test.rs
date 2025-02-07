@@ -17,6 +17,3 @@ if arr.contains(&2) {
 if value.is::<i32>() {
     println!("It's an i32");
 }
-
-
-

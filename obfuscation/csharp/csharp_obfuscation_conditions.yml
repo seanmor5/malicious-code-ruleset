@@ -2,6 +2,7 @@ rules:
   - id: csharp-obfuscation-conditions
     patterns:
       - pattern-not-inside: '...'
+      - pattern-not: while (true) { ... }
       - pattern-either:
           - pattern: if ($VAR) { ... }
           - pattern: while ($VAR) { ... }
@@ -10,7 +11,7 @@ rules:
       - metavariable-regex:
           metavariable: $VAR
           # Match all non-literals and the listed literals.
-          regex: ^(((?![a-zA-Z_]).+(?<![a-zA-Z_]))|true|false|null)$
+          regex: ^((?:[^a-zA-Z_'"]|(['"])[^'"]*\2)+|true|false|null)$
     message: Obfuscation by spurious conditions.
     severity: WARNING
     languages: 

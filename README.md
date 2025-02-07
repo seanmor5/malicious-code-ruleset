@@ -2,24 +2,24 @@
 
 ## Purpose
 
-This repository contains Semgrep (Opengrep) rules to detect dynamic code execution and obfuscation, patterns found in nearly 100% of malicious code incidents reported to this day. Only rules with low false-positive rates and strong correlation with malicious code are included.
+This repository contains Semgrep rules to detect dynamic code execution and obfuscation, patterns found in nearly 100% of malicious code incidents reported to this day. Only rules with low false-positive rates and strong correlation with malicious code are included.
 
 ## Supported Languages
 
-Bash  
-Clojure  
-C#  
-Dart  
-Go  
-Java  
-JavaScript  
-TypeScript  
-Lua  
-PHP  
-Python  
-Ruby  
-Rust  
-Scala  
+Bash
+Clojure
+C#
+Dart
+Go
+Java
+JavaScript
+TypeScript
+Lua
+PHP
+Python
+Ruby
+Rust
+Scala
 
 ## Installation
 
@@ -27,6 +27,7 @@ Scala
    ```bash
    pip install semgrep==1.102.0
    ```
+   Opengrep or any other Semgrep fork could also be used.
 2. Clone this repository:
    ```bash
    git clone https://github.com/apiiro/malicious-code-ruleset.git

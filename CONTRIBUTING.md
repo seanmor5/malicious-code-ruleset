@@ -1,6 +1,7 @@
 # Contributing to malicious-code-ruleset
 
-Thank you for your interest in contributing! Please follow these simple steps to ensure a smooth contribution process.
+Thank you for your interest in contributing! 
+Please follow these simple steps to ensure a smooth contribution process.
 
 ---
 
@@ -21,16 +22,17 @@ Thank you for your interest in contributing! Please follow these simple steps to
      ```bash
      semgrep --config ./malicious-code-ruleset
      ```
-    - Test on at least 10 large repositories to ensure a low false-positive ratio.
+    - Test on at least 3 large repositories of each relevant language to ensure a low false-positive rate.
     - If you add a new rule, make sure to set proper metadata. 
 4. **Commit**:
+    Commits must be signed.
     Write a clear, descriptive commit message:
     ```bash
-    git commit -m "Add rule for detecting obfuscated eval in JavaScript"
+    git commit -S -m "Add rule for detecting obfuscated evaluation in JavaScript"
     ```
 5. **Push and Submit PR**:
     ```bash
-    git push origin rule/your-branch-name
+    git push origin rule/branch-name
     ```
     - Provide a concise description in the pull request.
 

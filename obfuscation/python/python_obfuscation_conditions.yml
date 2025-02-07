@@ -1,6 +1,10 @@
 rules:
   - id: python-obfuscation-conditions
     patterns:
+      - pattern-not-inside: '...'
+      - pattern-not: |
+          while True:
+            ...
       - pattern-either:
           # Split for performance
           - patterns:
@@ -216,7 +220,7 @@ rules:
       - metavariable-regex:
           metavariable: $VAR
           # Match all non-literals and the listed literals.
-          regex: ^(((?![a-zA-Z_]).+(?<![a-zA-Z_]))|True|False|None)$
+          regex: ^\(?((?:[^a-zA-Z_'"]|(['"])[^'"]*\2)+|True|False|None)\)?$
     message: Obfuscation by spurious conditions.
     severity: WARNING
     languages: 
