@@ -2,9 +2,6 @@ rules:
   - id: python-obfuscation-conditions
     patterns:
       - pattern-not-inside: '...'
-      - pattern-not: |
-          while True:
-            ...
       - pattern-either:
           # Split for performance
           - patterns:
@@ -99,7 +96,7 @@ rules:
                               while not $VAR:
                                 ...
                   - patterns:
-                      - pattern-regex: ^while\snot.*:\s
+                      - pattern-regex: ^while\s(?:(?!True).)*:$
                       - pattern-either:
                           - pattern: |
                               while $VAR in $VAR:
@@ -197,7 +194,7 @@ rules:
                       while not $VAR:
                         ...
           - patterns:
-              - pattern-regex: ^while.*:\s
+              - pattern-regex: ^while\s(?:(?!True).)*:$
               - pattern-either:
                   - pattern: |
                       while $VAR not in $VAR:
