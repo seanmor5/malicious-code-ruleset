@@ -1,11 +1,13 @@
 rules:
   - id: javascript-obfuscation-methods-masking
-    pattern-either:
-      - pattern-regex: ((?<!\w|\$)parseInt\(.*){3,}
-      - pattern-regex: (?<!\w|\$)((Base64|DatatypeConverter|Random|String|StringBuilder|StringBuffer)\.)(.*(?<!\w|\$)\2){3,}
-      - pattern-regex: (\.(append|charAt|concat|delete|format|indexOf|insert))(?!\w|\$)(.*\2(?!\w|\$)){3,}
-      - pattern-regex: (\.(join|lastIndexOf|replace|replaceAll|setCharAt|split|startsWith))(?!\w|\$)(.*\2(?!\w|\$)){3,}
-      - pattern-regex: (\.(substring|toString|valueOf))(?!\w|\$)(.*\2(?!\w|\$)){3,}
+    patterns:
+      - pattern-regex: ^.{,401}$
+      - pattern-either:
+        - pattern-regex: ((?<!\w|\$)parseInt\(.*){4,}
+        - pattern-regex: (?<!\w|\$)((Base64|DatatypeConverter|Random|String|StringBuilder|StringBuffer)\.)(.*(?<!\w|\$)\2){4,}
+        - pattern-regex: (\.(append|charAt|concat|delete|format|indexOf|insert))(?!\w|\$)(.*\2(?!\w|\$)){4,}
+        - pattern-regex: (\.(join|lastIndexOf|replace|replaceAll|setCharAt|split|startsWith))(?!\w|\$)(.*\2(?!\w|\$)){4,}
+        - pattern-regex: (\.(substring|toString|valueOf))(?!\w|\$)(.*\2(?!\w|\$)){4,}
     message: Obfuscation by concatenation of string manipulating methods.
     severity: WARNING
     languages:

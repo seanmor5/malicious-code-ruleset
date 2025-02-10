@@ -1,6 +1,7 @@
 rules:
   - id: python-obfuscation-reconstruction
     patterns:
+      - pattern-regex: ^.{,401}$
       - pattern-either:
           - pattern: |
               ''.join([... for $C in $CONCAT])

@@ -2,7 +2,7 @@ rules:
   - id: php-obfuscation-declarations
     pattern-either:
       - patterns:
-        - pattern-regex: ^[^(list)\[].*
+        - pattern-not: list((...)) = (...)
         - pattern-either:
             - patterns:
                 - pattern: $VAR = (...)
@@ -17,7 +17,7 @@ rules:
                 - pattern-not: $OBJ->{$X} = (...)
         - metavariable-pattern:
             metavariable: $VAR
-            pattern-regex: ^\$\d|(.)\1{2,}|128|_0x|([^a-zA-Z0-9_$\->])
+            pattern-regex: ^\$\d|(.)\1{3,}|128|_0x|([^a-zA-Z0-9_$\->])
       - patterns:
         - pattern: define($DEF, ...)
         - metavariable-pattern:
