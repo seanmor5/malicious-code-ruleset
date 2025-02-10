@@ -3,12 +3,6 @@ rules:
     pattern-either:
       - pattern: $VAR = os
       - pattern: $VAR = subprocess
-      - pattern: |
-          subprocess.$CMD(['python', '-c', '...']);
-      - pattern: |
-          os.$CMD(..., '...', 'python', '-c', '...')
-      - pattern: |
-          os.$CMD('...', ['python', '-c', '...'])
       - patterns:
           - pattern-either:
               - pattern: |
@@ -19,7 +13,18 @@ rules:
                   os.$CMD($VAR)
           - metavariable-regex:
               metavariable: $STR
-              regex: .*python -c.*
+              regex: .*(python|bash) -c.*
+      - patterns:
+          - pattern-either:
+              - pattern: |
+                  subprocess.$CMD(['$LANG', '-c', '...']);
+              - pattern: |
+                  os.$CMD(..., '...', '$LANG', '-c', '...')
+              - pattern: |
+                  os.$CMD('...', ['$LANG', '-c', '...'])
+          - metavariable-regex:
+              metavariable: $LANG
+              regex: (python|bash)
     message: Dynamic execution using system commands.
     severity: ERROR
     languages:
