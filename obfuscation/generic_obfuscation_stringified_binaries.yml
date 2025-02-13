@@ -26,4 +26,17 @@ rules:
     message: "Binary file signature found in string"
     severity: WARNING
     languages:
-      - generic
+      - bash
+      - clojure
+      - csharp
+      - dart
+      - go
+      - java
+      - javascript
+      - typescript
+      - lua
+      - php
+      - python
+      - ruby
+      - rust
+      - scala

@@ -1,7 +1,6 @@
 rules:
   - id: javascript-suspicious-declaration-names
     patterns:
-      - pattern-regex: ^.{,401}$
       - pattern-either:
           - pattern: var $VAR = ...
           - pattern: function $VAR(...)

@@ -1,8 +1,5 @@
 # TP
 
-lst = ['h', 'e', 'l', 'l', 'o']
-x = ''.join([ch for ch in lst])
-
 lst = [72, 101, 108, 108, 111, 5]
 x = ''.join([i for i in lst])
 
@@ -12,6 +9,9 @@ lst = [72, 0x101, 108, 108, 111, 5]
 a = ''.join([chr(ch) for ch in lst])
 
 s = ''.join([chr(i) for i in [72, 101, 108, 108, 111, 0o42]])
+
+lst = ['h', 'e', 'l', 'l', 'o']
+x = ''.join([ch for ch in lst])
 
 
 # FP

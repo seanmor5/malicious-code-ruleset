@@ -11,46 +11,49 @@ rules:
           - pattern-regex: (i?)cdn\.discordapp\.com/attachments/
 
           # Testing services. Some could rarely appear in production, most should not. Very comfortable for staging and exfiltration.
-          - pattern-regex: (i?)\.beeceptor\.com\b
-          - pattern-regex: (i?)\.burpcollaborator\.(net|me)\b
-          - pattern-regex: (i?)(cn|row)\.byted-dast\.com\b
-          - pattern-regex: (i?)\.id\.repl\.co\b
-          - pattern-regex: (i?)\.interact\.sh\b
-          - pattern-regex: (i?)\.m\.pipedream\.net\b
+          - pattern-regex: (i?)\bbeeceptor\.com\b
+          - pattern-regex: (i?)\bburpcollaborator\.(net|me)\b
+          - pattern-regex: (i?)\b(cn|row)\.byted-dast\.com\b
+          - pattern-regex: (i?)\bherokuapp\.com\b
+          - pattern-regex: (i?)\bid\.repl\.co\b
+          - pattern-regex: (i?)\binteract\.sh\b
+          - pattern-regex: (i?)\bpipedream\.net\b
           - pattern-regex: (i?)run\.mocky\.io/v./
-          - pattern-regex: (i?)\.ngrok-free\.(app|dev)\b
-          - pattern-regex: (i?)\.nona\.run\b
-          - pattern-regex: (i?)\.oastify\.com\b
-          - pattern-regex: (i?)\.oast\.(fun|live|me|online|pro|site)\b
-          - pattern-regex: (i?)\.requestbin\.com\b
-          - pattern-regex: (i?)\.requestcatcher\.com\b
-          - pattern-regex: (i?)\.treehouse\.com\b
+          - pattern-regex: (i?)\bngrok(-free)?\.(app|dev|io)\b
+          - pattern-regex: (i?)\bnona\.run\b
+          - pattern-regex: (i?)\boastify\.com\b
+          - pattern-regex: (i?)\boast\.(fun|live|me|online|pro|site)\b
+          - pattern-regex: (i?)\brequestbin\.com\b
+          - pattern-regex: (i?)\brequestcatcher\.com\b
+          - pattern-regex: (i?)\btreehouse\.com\b
           - pattern-regex: (i?)\btypedwebhook\.tools/webhook/
-          - pattern-regex: (i?)\bwebhook\.site/
-          - pattern-regex: (i?)\.webhulktest\.com\b
-          - pattern-regex: (i?)\bwebhook-test\.com/
-          - pattern-regex: (i?)\.workers\.dev\b
-          - pattern-regex: (i?)\bsideloadly\.io/
-          - pattern-regex: (i?)\bsmee\.io/
-          - pattern-regex: (i?)\.zicp\.fun\b
+          - pattern-regex: (i?)\bwebhook\.site\b
+          - pattern-regex: (i?)\bwebhulktest\.com\b
+          - pattern-regex: (i?)\bwebhook-test\.com\b
+          - pattern-regex: (i?)\bworkers\.dev\b
+          - pattern-regex: (i?)\bsideloadly\.io\b
+          - pattern-regex: (i?)\bsmee\.io\b
+          - pattern-regex: (i?)\bzicp\.fun\b
           - pattern-regex: (i?)\.22\.ax\b
 
-          # Text sharing services. Should never be used in production.
-          - pattern-regex: (i?)api\.telegram\.org/
+          # Sharing services. Should never be used in production.
+          - pattern-regex: (i?)api\.telegram\.org\b
           - pattern-regex: (i?)paste.bingner.com/paste/
-          - pattern-regex: (i?)\bclbin\.com/
-          - pattern-regex: (i?)\bdpaste\.org/
-          - pattern-regex: (i?)ghostbin\.site/
-          - pattern-regex: (i?)gist\.github\.com/
-          - pattern-regex: (i?)hastebin\.com/
+          - pattern-regex: (i?)\bclbin\.com\b
+          - pattern-regex: (i?)\bdpaste\.org\b
+          - pattern-regex: (i?)\bdropboxusercontent\.com\b
+          - pattern-regex: (i?)\bfiletransfer.io/\b
+          - pattern-regex: (i?)ghostbin\.site\b
+          - pattern-regex: (i?)gist\.github\.com\b
+          - pattern-regex: (i?)hastebin\.com\b
           - pattern-regex: (i?)limewire\.com/assets/
           - pattern-regex: (i?)\bpaste\.ee/p/
-          - pattern-regex: (i?)pastebin\.com/
+          - pattern-regex: (i?)pastebin\.com\b
           - pattern-regex: (i?)\bpastie\.org/p/
           - pattern-regex: (i?)privatebin\.(net|io)/\?
-          - pattern-regex: (i?)rentry\.co/
+          - pattern-regex: (i?)rentry\.co\b
           - pattern-regex: (i?)sendspace\.com/file/
-          - pattern-regex: (i?)transfer\.sh/
+          - pattern-regex: (i?)transfer\.sh\b
           - pattern-regex: (i?)\b0bin\.net/paste/
 
           # Port-forwarding services
@@ -58,27 +61,43 @@ rules:
               - pattern-regex: \blocaltunnel\b
               - pattern-regex: \blt\s--port\s
           - pattern-regex: (i?)\bply\.gg\b
+          - pattern-regex: (i?)(\.requestrepo\.com|requestrepo\.com/r/)\b
           - pattern-regex: \bserveo\s(http|tcp)\s\d
           - pattern-regex: (i?)\btermbin\.com\b
 
           # Get IP
-          - pattern-regex: (i?)api\.ipify\.org\b
+          - pattern-regex: (i?)checkip\.amazonaws\.com\b
+          - pattern-regex: (i?)myip\.dnsomatic\.com\b
           - pattern-regex: (i?)checkip\.dyndns\.org\b
-          - pattern-regex: (i?)\bipinfo\.io\b
-          - pattern-regex: (?i)(https?:\/\/|['"]|\b)ip\.me\b
+          - pattern-regex: (i?)\bcurlmyip\.com\b
           - pattern-regex: (i?)\bicanhazip\.com\b
+          - pattern-regex: (i?)\bident\.me\b
           - pattern-regex: (i?)\bifconfig\.me\b
+          - pattern-regex: (i?)(https?:\/\/|['"]|\b)ip\.me\b
+          - pattern-regex: (i?)\bipecho\.net\b
+          - pattern-regex: (i?)api\.ipify\.org\b
+          - pattern-regex: (i?)\bipinfo\.io\b
+          - pattern-regex: (i?)\bip-api.com\b
           - pattern-regex: (i?)\bjsonip\.com\b
           - pattern-regex: (i?)\bmyexternalip\.com\b
-          - pattern-regex: (i?)\bwtfismyip\.com\b
-          - pattern-regex: (i?)\bwhatismyipaddress\.com\b
           - pattern-regex: (i?)api\.myip\.com\b
-          - pattern-regex: (i?)checkip\.amazonaws\.com\b
-          - pattern-regex: (i?)\bident\.me\b
-          - pattern-regex: (i?)myip\.dnsomatic\.com\b
+          - pattern-regex: (i?)\bwhatismyipaddress\.com\b
+          - pattern-regex: (i?)\bwtfismyip\.com\b
           - pattern-regex: (i?)whatismyip.akamai.com\b
-          - pattern-regex: (i?)\bcurlmyip\.com\b
     message: Hiding payloads remotely. Leveraged to detect some staging and exfiltration. 
     severity: ERROR
     languages:
-      - generic
+      - bash
+      - clojure
+      - csharp
+      - dart
+      - go
+      - java
+      - javascript
+      - typescript
+      - lua
+      - php
+      - python
+      - ruby
+      - rust
+      - scala

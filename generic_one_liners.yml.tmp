@@ -1,7 +1,0 @@
-rules:
-  - id: generic-one-liners
-    pattern-regex: ^.{401,}$
-    message: Minified, compressed, obfuscated or any other form of unreadable files is excluded from the scan. It is highly recommended to store such files in CDN, cloud buckets, etc. and keep the codebase readable.
-    severity: INFO
-    languages:
-      - generic

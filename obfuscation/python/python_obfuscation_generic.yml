@@ -1,8 +1,6 @@
 rules:
   - id: python-obfuscation-generic
-    patterns:
-      - pattern-regex: ^.{,401}$
-      - pattern-regex: (__import__|globals\(\))
+    pattern-regex: (__import__|globals\(\))
     message: Common obfuscation signatures.
     severity: WARNING
     languages: 

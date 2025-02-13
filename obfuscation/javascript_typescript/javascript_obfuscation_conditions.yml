@@ -1,7 +1,6 @@
 rules:
   - id: javascript-obfuscation-conditions
     patterns:
-      - pattern-regex: ^.{,401}$
       - pattern-not-inside: '...'
       - pattern-not: while (true) { ... }
       - pattern-either:
