@@ -6,26 +6,13 @@ This repository contains Semgrep rules to detect dynamic code execution and obfu
 
 ## Supported Languages
 
-Bash
-Clojure
-C#
-Dart
-Go
-Java
-JavaScript
-TypeScript
-Lua
-PHP
-Python
-Ruby
-Rust
-Scala
+Bash, Clojure, C#, Dart, Go, Java, JavaScript, TypeScript, Lua, PHP, Python, Ruby, Rust, Scala
 
 ## Installation
 
 1. Install [Semgrep](https://semgrep.dev/docs/getting-started):
    ```bash
-   pip install semgrep==1.102.0
+   pip install semgrep
    ```
    Opengrep or any other Semgrep fork could also be used.
 2. Clone this repository:
